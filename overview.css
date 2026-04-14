@@ -46,31 +46,6 @@ body {
   font-size: 12px;
 }
 
-.portfolio-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-
-.portfolio-tab {
-  text-decoration: none;
-  color: var(--muted);
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.58);
-  border: 1px solid var(--line);
-  font-size: 12px;
-}
-
-.portfolio-tab.is-active,
-.portfolio-tab:hover,
-.portfolio-tab:focus-visible {
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.92);
-  outline: none;
-}
-
 h1,
 h2 {
   margin: 0;
