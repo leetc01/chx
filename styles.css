@@ -132,22 +132,6 @@ body::before {
   font-size: 12px;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  margin-top: 18px;
-}
-
-.hero-actions-label {
-  color: rgba(255, 255, 255, 0.74);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-right: 4px;
-}
-
 #stage {
   position: fixed;
   top: 118px;

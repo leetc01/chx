@@ -255,6 +255,11 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   align-self: stretch;
+  min-width: 0;
+}
+
+.contact-grid > * {
+  min-width: 0;
 }
 
 .contact-item {
@@ -270,6 +275,8 @@ body {
   justify-content: space-between;
   gap: 8px;
   backdrop-filter: blur(8px);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .contact-item span,
@@ -288,6 +295,11 @@ body {
 }
 
 .contact-item strong {
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   font-size: 16px;
   line-height: 1.45;
   color: #fff;
