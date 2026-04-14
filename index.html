@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>长护险智能风控与精准支付一体化平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <span class="brand-kicker">养老数据价值化方案 01</span>
+          <strong class="brand-title">长护险智能风控与精准支付一体化平台</strong>
+        </div>
+        <div class="topbar-meta">
+          <span class="track-chip" id="trackLabel">正文</span>
+          <a class="tool-button" href="./overview.html">总图</a>
+          <a class="tool-button" href="./detail.html">详案</a>
+          <button class="tool-button" id="notesToggle" type="button">备注 N</button>
+          <button class="tool-button" id="overviewToggle" type="button">总览 O</button>
+          <button class="tool-button" id="fullscreenToggle" type="button">全屏 F</button>
+        </div>
+      </header>
+
+      <main id="stage" aria-live="polite">
+        <section class="slide accent-amber" data-track="正文" data-title="首页">
+          <div class="slide-shell hero-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">面向医保监管、养老服务规范化和数据产品化运营</div>
+            <div class="hero-layout">
+              <div class="hero-copy">
+                <h1>长期护理保险智能风控与精准支付一体化平台</h1>
+                <p class="hero-subtitle">
+                  把线下护理服务过程，变成一条可核验、可监管、可支付、可沉淀的数据闭环。
+                </p>
+                <div class="tag-row">
+                  <span class="tag">长护险</span>
+                  <span class="tag">养老行业</span>
+                  <span class="tag">基金风控</span>
+                  <span class="tag">数据要素场景</span>
+                </div>
+              </div>
+              <div class="hero-panel">
+                <p class="panel-label">方案定位</p>
+                <p class="panel-quote">
+                  本方案聚焦养老监管场景中的数据价值化路径，目标是把监管、支付与数据产品运营打通。
+                </p>
+                <ul class="compact-list">
+                  <li>讲清楚行业痛点和业务闭环</li>
+                  <li>技术只证明可行，不喧宾夺主</li>
+                  <li>重点体现德阳数据交易中心可承接的场景运营价值</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>首页说明</h3>
+            <p>
+              本方案从德阳数据交易中心视角出发，聚焦养老场景中的监管升级、数据治理与产品化运营。
+            </p>
+            <ul>
+              <li>先讲为什么这个场景成立。</li>
+              <li>再讲平台如何把服务、监管、支付串起来。</li>
+              <li>最后明确德阳数据交易中心的实施定位与商业价值。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-copper" data-track="正文" data-title="方案框架">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">方案框架</div>
+            <h2>今天只讲三个问题</h2>
+            <div class="card-grid three-up">
+              <article class="card">
+                <span class="card-index">01</span>
+                <h3>为什么这个场景成立</h3>
+                <p>养老需求、长护险制度、数据要素政策三条线同时成立，不是空中楼阁。</p>
+              </article>
+              <article class="card">
+                <span class="card-index">02</span>
+                <h3>平台怎么形成闭环</h3>
+                <p>把“服务真实、评估准确、支付合规、监管高效”做成一条可执行链路。</p>
+              </article>
+              <article class="card">
+                <span class="card-index">03</span>
+                <h3>为什么适合德阳数据交易中心</h3>
+                <p>这类项目天然能沉淀数据产品、场景案例和长期运营收入，不只是一次性交付。</p>
+              </article>
+            </div>
+            <div class="note-banner">
+              技术细节保留在备注和附录中，正文重点呈现结构、逻辑和商业结果。
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <p>本页用于建立阅读顺序，避免方案在技术细节中分散重点。</p>
+            <ul>
+              <li>先讲政策与市场基础。</li>
+              <li>再讲业务闭环与平台能力。</li>
+              <li>最后落到实施路径与运营价值。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-gold" data-track="正文" data-title="政策与市场窗口">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">政策与市场基础</div>
+            <h2>这个场景不是假设，而是国家政策和市场共同推动</h2>
+            <div class="stat-grid">
+              <article class="stat-card">
+                <strong>2.20 亿</strong>
+                <span>2024 年末我国 65 岁及以上人口</span>
+                <small>占总人口 15.6%</small>
+              </article>
+              <article class="stat-card">
+                <strong>49 城</strong>
+                <span>国家级长护险试点城市</span>
+                <small>覆盖近 1.9 亿参保人，累计 270 余万人享受待遇</small>
+              </article>
+              <article class="stat-card">
+                <strong>300+</strong>
+                <span>到 2026 年重点打造的数据要素典型场景</span>
+                <small>数据产业年均增速目标超过 20%</small>
+              </article>
+            </div>
+            <div class="split-callout">
+              <div class="callout-card">
+                <h3>养老侧</h3>
+                <p>
+                  国务院办公厅已经发布首个以“银发经济”命名的政策文件，养老、照护、健康管理正从民生议题转成长期产业议题。
+                </p>
+              </div>
+              <div class="callout-card">
+                <h3>数据侧</h3>
+                <p>
+                  “数据要素×医疗健康”和公共数据开发利用政策，已经为这类场景的合规开发、产品化和交易化打开制度空间。
+                </p>
+              </div>
+            </div>
+            <p class="source-line">
+              资料来源：
+              <a href="https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html" target="_blank" rel="noreferrer">国家统计局《2024 年国民经济和社会发展统计公报》</a>
+              ·
+              <a href="https://www.nhsa.gov.cn/art/2025/4/9/art_14_16233.html" target="_blank" rel="noreferrer">国家医保局转载人民日报文章</a>
+              ·
+              <a href="https://www.cac.gov.cn/2024-01/05/c_1706119078060945.htm" target="_blank" rel="noreferrer">《“数据要素×”三年行动计划（2024-2026 年）》</a>
+              ·
+              <a href="https://www.gov.cn/yaowen/liebiao/202401/content_6926137.htm" target="_blank" rel="noreferrer">国办银发经济文件</a>
+            </p>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <ul>
+              <li>养老不是“老行业”，而是政策驱动下还在扩容的场景。</li>
+              <li>长护险不是边缘试点，已经进入从试点走向制度化实施的阶段。</li>
+              <li>这让“养老数据价值化”具备了长期需求，不是一次性项目。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-rose" data-track="正文" data-title="行业痛点">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">行业痛点</div>
+            <h2>当前最大的问题不是“有没有服务”，而是“能不能看见、核得准、付得对”</h2>
+            <div class="card-grid four-up">
+              <article class="card">
+                <h3>医保基金方</h3>
+                <p>最担心基金跑冒滴漏，人工抽查成本高，但隐蔽欺诈越来越难查。</p>
+              </article>
+              <article class="card">
+                <h3>经办保险公司</h3>
+                <p>面对海量碎片化单据，审核压力大，风控责任重，人工效率低。</p>
+              </article>
+              <article class="card">
+                <h3>护理服务机构</h3>
+                <p>合规机构缺少证明自己服务真实和质量稳定的数据抓手，容易被劣币挤压。</p>
+              </article>
+              <article class="card">
+                <h3>失能家庭</h3>
+                <p>最怕评估不公、服务缩水、费用不透明，明明有制度却感受不到保障质量。</p>
+              </article>
+            </div>
+            <div class="accent-block">
+              本质上，这是一个数据断裂问题：服务发生在物理世界，支付发生在制度世界，中间缺一条可信的数据链。
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <ul>
+              <li>长护险最大的管理难点是服务很多发生在居家场景，天然不可视。</li>
+              <li>如果无法把服务过程数字化，后面的评估、结算、监管都会失真。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-teal" data-track="正文" data-title="核心价值主张">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">方案定位</div>
+            <h2>这套方案只做一件事</h2>
+            <div class="statement-box">
+              把护理服务过程，转化成可核验、可风控、可支付、可沉淀的数据资产。
+            </div>
+            <div class="card-grid four-up">
+              <article class="card compact-card">
+                <h3>基金安全</h3>
+                <p>把欺诈和违规从事后追责，前移到事前预警和事中拦截。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>支付精准</h3>
+                <p>让待遇与真实失能状态、真实服务供给更精准匹配。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>监管提效</h3>
+                <p>把海量人工抽查变成规则核验、异常预警和重点穿透。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>数据沉淀</h3>
+                <p>把监管场景进一步沉淀为可运营的数据产品、指数、模型与报告。</p>
+              </article>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>核心表述</h3>
+            <p>本方案不是单纯的软件建设，而是一套让养老照护场景具备数据可治理、可定价、可运营能力的机制。</p>
+          </aside>
+        </section>
+
+        <section class="slide accent-blue" data-track="正文" data-title="五位一体闭环">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">总体方案</div>
+            <h2>平台用“五位一体”做出一条完整闭环</h2>
+            <div class="flow-grid">
+              <article class="flow-step">
+                <span>01</span>
+                <h3>服务过程可信存证</h3>
+                <p>先解决“服务是否真的发生”</p>
+              </article>
+              <article class="flow-step">
+                <span>02</span>
+                <h3>失能状态持续评估</h3>
+                <p>再解决“需求是否长期合理”</p>
+              </article>
+              <article class="flow-step">
+                <span>03</span>
+                <h3>医疗与待遇冲突校验</h3>
+                <p>把基础违规挡在支付前</p>
+              </article>
+              <article class="flow-step">
+                <span>04</span>
+                <h3>资金流向智能分析</h3>
+                <p>识别单据背后的异常模式和合谋关系</p>
+              </article>
+              <article class="flow-step">
+                <span>05</span>
+                <h3>多维数据交叉验证</h3>
+                <p>避免单一数据源被伪造或操控</p>
+              </article>
+            </div>
+            <div class="note-banner">
+              本页用于说明：平台不是零散功能堆砌，而是从服务到支付再到监管的一条业务链。
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <ul>
+              <li>原方案里提到的“数据孪生”可以在这里一笔带过。</li>
+              <li>强调“事前、事中、事后”全流程，而不是只做一个稽核工具。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-gold" data-track="正文" data-title="服务可信存证">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">模块一</div>
+            <h2>第一层能力，先证明“服务确实发生了”</h2>
+            <div class="proof-chain">
+              <div class="proof-item">
+                <h3>人到了没</h3>
+                <p>定位、电子围栏、室内轨迹</p>
+              </div>
+              <div class="proof-item">
+                <h3>谁服务谁</h3>
+                <p>护理员与参保人双确认</p>
+              </div>
+              <div class="proof-item">
+                <h3>做了什么</h3>
+                <p>服务项目数字化勾选、电子签名</p>
+              </div>
+              <div class="proof-item">
+                <h3>持续多久</h3>
+                <p>时间戳、过程记录、异常时长识别</p>
+              </div>
+            </div>
+            <div class="split-callout">
+              <div class="callout-card">
+                <h3>对业务的意义</h3>
+                <p>把时间、地点、人员、服务项目做成一条证据链，为结算申请提供真实依据。</p>
+              </div>
+              <div class="callout-card">
+                <h3>技术可行性一句话</h3>
+                <p>APP 打卡、定位、人脸确认、哈希存证都是成熟能力，区块链只负责防篡改，不会增加理解门槛。</p>
+              </div>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>补充说明</h3>
+            <ul>
+              <li>原方案还可以展开 IoT：智能床垫、智能药盒、蓝牙信标。</li>
+              <li>可简单说“重技术但不神秘，本质上就是让证据链更完整”。</li>
+              <li>如需压缩篇幅，讲到“证据链”即可切换到下一页。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-copper" data-track="正文" data-title="失能持续评估">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">模块二</div>
+            <h2>第二层能力，让评估不再“一评定终身”</h2>
+            <div class="card-grid three-up">
+              <article class="card">
+                <h3>动态观察</h3>
+                <p>通过可穿戴设备、非接触式传感器、作息数据，持续观察活动能力变化。</p>
+              </article>
+              <article class="card">
+                <h3>复评触发</h3>
+                <p>当长期行为数据明显偏离原有失能等级时，系统给出复评建议，而不是直接替代人工判断。</p>
+              </article>
+              <article class="card">
+                <h3>评估监督</h3>
+                <p>评估过程留痕、路径可核、逻辑可校验，减少“人情评”和主观偏差。</p>
+              </article>
+            </div>
+            <div class="accent-block">
+              核心不是用 AI 替代评估员，而是让评估有持续数据支撑，避免待遇长期与真实状况脱节。
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>补充说明</h3>
+            <ul>
+              <li>视频分析是高级选项，而且只做本地边缘分析，不上传原始视频。</li>
+              <li>这一页重点是“动态复评”，不是展示算法模型。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-rose" data-track="正文" data-title="支付前校验">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">模块三</div>
+            <h2>第三层能力，在支付前把明显违规先拦下来</h2>
+            <div class="card-grid three-up">
+              <article class="card">
+                <h3>住院状态实时校验</h3>
+                <p>住院期间自动拦截居家上门护理结算，防止待遇冲突。</p>
+              </article>
+              <article class="card">
+                <h3>生存状态定期核验</h3>
+                <p>与公安等权威信息进行安全合规校验，发现死亡后立即冻结相关待遇申请。</p>
+              </article>
+              <article class="card">
+                <h3>服务合理性校验</h3>
+                <p>把失能等级、诊断信息和申报项目对应起来，识别明显不合理申报。</p>
+              </article>
+            </div>
+            <div class="note-banner">
+              本页直接对应支付规则和监管常识，是平台快速见效的关键能力之一。
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <p>住院冲突、生存状态、项目合理性都属于支付前可直接校验的规则场景，落地难度低、见效速度快。</p>
+          </aside>
+        </section>
+
+        <section class="slide accent-blue" data-track="正文" data-title="资金流向与团伙挖掘">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">模块四</div>
+            <h2>第四层能力，不只盯单据，而是盯整个关系网络</h2>
+            <div class="split-grid">
+              <div class="feature-panel">
+                <h3>关系图谱看什么</h3>
+                <ul class="bullet-list">
+                  <li>参保人、护理员、服务机构、评估员、执业医师之间的关联强度</li>
+                  <li>服务是否长期集中在异常紧密的小圈层中</li>
+                  <li>是否存在评估、服务、结算之间的可疑协同关系</li>
+                </ul>
+              </div>
+              <div class="feature-panel">
+                <h3>异常模式看什么</h3>
+                <ul class="bullet-list">
+                  <li>账单时长整齐化，不符合真实服务分布</li>
+                  <li>月末集中申报、服务记录爆发式增长</li>
+                  <li>耗材消耗与失能等级、老人数量严重不匹配</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accent-block">
+              这一步的价值是：把“看起来都合规”的单条记录，放回整体网络里重新判断。
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>补充说明</h3>
+            <ul>
+              <li>这是原方案里最有专业感的一部分，但不要讲算法名词。</li>
+              <li>只说“关系网络分析”和“异常模式识别”就足够了。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-teal" data-track="正文" data-title="技术可行性">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">可落地性</div>
+            <h2>技术上完全可以分阶段落地，不需要一步到位</h2>
+            <div class="roadmap-cards">
+              <article class="phase-card">
+                <span>基础版</span>
+                <h3>0-6 个月</h3>
+                <p>APP 存证、规则引擎、住院/死亡校验、基金监控大屏，先把最刚需的闭环跑通。</p>
+              </article>
+              <article class="phase-card">
+                <span>增强版</span>
+                <h3>6-18 个月</h3>
+                <p>动态评估、复杂网络分析、风险模型包、多部门安全对接逐步上线。</p>
+              </article>
+              <article class="phase-card">
+                <span>进阶版</span>
+                <h3>18 个月以后</h3>
+                <p>IoT、隐私计算、跨区域风险共享、标准化 SaaS 复制能力形成产品化输出。</p>
+              </article>
+            </div>
+            <div class="split-callout">
+              <div class="callout-card">
+                <h3>本页重点</h3>
+                <p>先进性可以有，但更重要的是实施风险可控、阶段目标明确、回报路径清晰。</p>
+              </div>
+              <div class="callout-card">
+                <h3>一句话结论</h3>
+                <p>先上规则与数据连接，再逐步叠加 AI 和 IoT，这样最像真实项目，不像概念秀。</p>
+              </div>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>补充说明</h3>
+            <ul>
+              <li>云原生、微服务、中台、区块链、隐私计算都在原方案里，但这页只讲分阶段实施。</li>
+              <li>如需进一步展开，可切换到附录技术页。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-gold" data-track="正文" data-title="数据产品化">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">数据产品化运营</div>
+            <h2>这个项目真正值钱的地方，在于它能沉淀持续运营的数据产品</h2>
+            <div class="layer-stack">
+              <div class="layer">
+                <span>原始场景数据</span>
+                <p>服务记录、评估结果、结算信息、住院状态、机构运营数据</p>
+              </div>
+              <div class="layer">
+                <span>治理加工层</span>
+                <p>脱敏、标准化、标签化、模型评分、规则包、合规授权运营</p>
+              </div>
+              <div class="layer">
+                <span>可运营产品层</span>
+                <p>风险评分、合规画像、需求热力图、趋势指数、专题报告、API 服务</p>
+              </div>
+            </div>
+            <div class="card-grid three-up">
+              <article class="card compact-card">
+                <h3>基金风险评分</h3>
+                <p>给监管方和经办方提供重点核查名单与风险等级。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>养老服务供需图谱</h3>
+                <p>把区域老人失能需求和机构服务能力做成可分析的热力图。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>机构合规画像</h3>
+                <p>形成面向养老集团、保险公司和政府部门的长期运营数据服务。</p>
+              </article>
+            </div>
+            <div class="accent-block">
+              交易的不是个人隐私原始数据，而是合规加工后的模型、指数、报告和服务能力。
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>价值说明</h3>
+            <ul>
+              <li>用这页把项目从“监管信息化”抬升到“数据要素场景运营”。</li>
+              <li>强调原始数据不直接流通，流通的是脱敏加工后的数据产品与能力。</li>
+              <li>这和“数据二十条”“公共数据开发利用”政策口径一致。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-copper" data-track="正文" data-title="商业模式">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">商业模式与收益测算</div>
+            <h2>商业上可以同时服务政府、保险公司和大型养老机构</h2>
+            <div class="card-grid four-up">
+              <article class="card compact-card">
+                <h3>项目制建设</h3>
+                <p>面向医保局或地方政府，收取平台建设、部署和集成费用。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>年度运营服务</h3>
+                <p>按参保人数、基金规模或服务范围收取持续运营服务费。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>效果分成</h3>
+                <p>按年度风险减量或核减违规金额的一定比例收费，最容易打动甲方。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>SaaS / License</h3>
+                <p>面向保险公司和大型护理集团，做审核与内控模块订阅。</p>
+              </article>
+            </div>
+            <div class="calc-card">
+              <h3>收入测算示例</h3>
+              <p>
+                以 500 万人口、长护险参保 300 万、年度基金支出 10 亿元的地级市为例，
+                若按保守口径实现 5% 风险减量，对应可挽回约 5000 万元；
+                若按 20% 效果分成，年度服务收入可达 1000 万元。
+              </p>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <ul>
+              <li>不要把商业模式讲成一个收费表，而要讲成“多客户、多收入层”的结构。</li>
+              <li>效果分成模式最有吸引力，因为它把双方利益直接绑定。</li>
+              <li>测算数字来自方案示例，可作为保守情景模拟口径。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-blue" data-track="正文" data-title="德阳实施定位">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">与德阳数交中心的匹配度</div>
+            <h2>这类项目，不是纯软件项目，而是数据要素场景运营项目</h2>
+            <div class="stat-grid">
+              <article class="stat-card">
+                <strong>230 家</strong>
+                <span>德阳数据交易公司已引育数商</span>
+                <small>形成较强生态组织能力</small>
+              </article>
+              <article class="stat-card">
+                <strong>3048 个</strong>
+                <span>已上架数据元件</span>
+                <small>说明其已有产品化与标准化基础</small>
+              </article>
+              <article class="stat-card">
+                <strong>3.4 亿元</strong>
+                <span>累计数据交易总额</span>
+                <small>并形成 50 余个应用场景</small>
+              </article>
+            </div>
+            <div class="split-grid">
+              <div class="feature-panel">
+                <h3>德阳已经具备的基础</h3>
+                <ul class="bullet-list">
+                  <li>唯一市级数据交易机构，具备资源组织与交易规则承接能力</li>
+                  <li>已有数据资产入表、质押融资、跨场景交易等经验</li>
+                  <li>正在推动“资源化-资产化-价值化”链条形成</li>
+                </ul>
+              </div>
+              <div class="feature-panel">
+                <h3>在这个项目中的理想角色</h3>
+                <ul class="bullet-list">
+                  <li>数据资源整合与授权运营组织者</li>
+                  <li>数据产品设计与交易服务平台</li>
+                  <li>政府、机构、保险公司之间的场景协同枢纽</li>
+                </ul>
+              </div>
+            </div>
+            <p class="source-line">
+              资料来源：
+              <a href="https://www.deo.org.cn/article/hyfz_dfdt/detail1996.html" target="_blank" rel="noreferrer">德阳数据要素创新成果亮相第八届数字中国建设峰会</a>
+              ·
+              <a href="https://www.deo.org.cn/article/sjjy_jydt/detail719.html" target="_blank" rel="noreferrer">“德阳探索”在我国数据要素领域第一门户平台绽放精彩</a>
+            </p>
+          </div>
+          <aside class="slide-notes">
+            <h3>定位说明</h3>
+            <ul>
+              <li>本页回答“为什么这一场景适合由德阳数据交易中心牵引推进”。</li>
+              <li>重点不是承接单一软件开发，而是承接场景运营、产品化和生态整合。</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="slide accent-teal" data-track="正文" data-title="实施路线">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">实施路径</div>
+            <h2>建议按“三步走”推进，先做成示范，再做成产品</h2>
+            <div class="timeline">
+              <article class="timeline-step">
+                <span class="timeline-tag">第一阶段</span>
+                <h3>试点建设期</h3>
+                <p>6 个月</p>
+                <ul class="bullet-list">
+                  <li>选 1 个地市或区县</li>
+                  <li>2-3 家机构，约 500 名参保人</li>
+                  <li>先上线可信存证、规则核验、大屏</li>
+                </ul>
+              </article>
+              <article class="timeline-step">
+                <span class="timeline-tag">第二阶段</span>
+                <h3>深化推广期</h3>
+                <p>12 个月</p>
+                <ul class="bullet-list">
+                  <li>覆盖统筹区主要经办与服务机构</li>
+                  <li>加入动态评估与图谱分析</li>
+                  <li>形成标准化风控规则包</li>
+                </ul>
+              </article>
+              <article class="timeline-step">
+                <span class="timeline-tag">第三阶段</span>
+                <h3>复制扩张期</h3>
+                <p>持续推进</p>
+                <ul class="bullet-list">
+                  <li>沉淀标准化 SaaS / 混合云方案</li>
+                  <li>对省内外试点城市复制输出</li>
+                  <li>形成跨区域风险共享与品牌效应</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <p>本页重点在于说明项目推进逻辑和商业化节奏，而不是展示技术排期表。</p>
+          </aside>
+        </section>
+
+        <section class="slide accent-gold" data-track="正文" data-title="预期成效">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">预期成效</div>
+            <h2>本方案最终形成的，不只是系统能力，更是治理结果和运营结果</h2>
+            <div class="card-grid four-up">
+              <article class="card">
+                <h3>对医保局</h3>
+                <p>基金更安全，监管更有抓手，也更容易形成可展示的治理成果。</p>
+              </article>
+              <article class="card">
+                <h3>对经办机构</h3>
+                <p>审核效率明显提升，人工压力下降，风险责任更可控。</p>
+              </article>
+              <article class="card">
+                <h3>对服务机构与家庭</h3>
+                <p>让合规机构获得更公平的环境，让真正需要照护的家庭得到更稳定服务。</p>
+              </article>
+              <article class="card">
+                <h3>对德阳数交中心</h3>
+                <p>沉淀标杆案例、数据产品和跨行业复制模板，形成长期品牌资产。</p>
+              </article>
+            </div>
+            <div class="roadmap-cards">
+              <article class="phase-card">
+                <span>试点目标</span>
+                <h3>风险减量</h3>
+                <p>可先按 3%-5% 的保守口径测算，形成更可信的商业说法。</p>
+              </article>
+              <article class="phase-card">
+                <span>试点目标</span>
+                <h3>效率提升</h3>
+                <p>人工审核工作量可按 60% 以上的目标去设计与验证。</p>
+              </article>
+              <article class="phase-card">
+                <span>试点目标</span>
+                <h3>产品沉淀</h3>
+                <p>至少形成风险评分、合规画像、供需报告等 3 类产品输出。</p>
+              </article>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>指标说明</h3>
+            <p>
+              原方案里有更激进的效果预估。正文建议使用“保守可验证目标”口径，以增强项目论证的可信度和可执行性。
+            </p>
+          </aside>
+        </section>
+
+        <section class="slide accent-rose" data-track="正文" data-title="风险与应对">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">风险控制</div>
+            <h2>这类方案最大的挑战，不在技术，而在合规、推广和持续运营</h2>
+            <div class="card-grid four-up">
+              <article class="card compact-card">
+                <h3>政策合规风险</h3>
+                <p>坚持最小必要、授权先行、隐私增强技术，和医保、网信、法务同步推进。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>数据质量风险</h3>
+                <p>建立设备准入、数据质量监控和护理员培训机制，避免“脏数据”进系统。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>推广阻力</h3>
+                <p>对机构强调“保护合规者”，对用户强调“减负增效”，降低一线抵触情绪。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>模型迭代风险</h3>
+                <p>建立持续运营团队，规则和模型按月优化，不把系统做成一次性交付。</p>
+              </article>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>本页说明</h3>
+            <p>本页用于说明方案不仅关注前景，也充分考虑合规、推广和持续运营中的真实约束。</p>
+          </aside>
+        </section>
+
+        <section class="slide accent-blue" data-track="正文" data-title="总结结论">
+          <div class="slide-shell hero-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">结论页</div>
+            <div class="hero-layout closing-layout">
+              <div class="hero-copy">
+                <h2>核心结论</h2>
+                <div class="statement-box">
+                  这套方案的本质，是把养老照护这个重线下、重信任、重监管的场景，做成一个可验证、可运营、可交易的数据要素场景。
+                </div>
+                <div class="tag-row">
+                  <span class="tag">能解决真实问题</span>
+                  <span class="tag">能形成标杆案例</span>
+                  <span class="tag">能沉淀持续收入</span>
+                </div>
+              </div>
+              <div class="hero-panel">
+                <p class="panel-label">实施建议</p>
+                <ul class="compact-list">
+                  <li>监管侧可优先关注第 5-11 页的业务闭环与风控能力。</li>
+                  <li>数交侧可优先关注第 12-15 页的数据产品化与实施定位。</li>
+                  <li>技术扩展能力可在附录中进一步展开。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>结论说明</h3>
+            <p>
+              德阳数据交易中心如果做这个场景，不只是拿一个政府项目，而是在养老赛道先占住一个具备政策确定性、数据沉淀能力和复制空间的高价值入口。
+            </p>
+          </aside>
+        </section>
+
+        <section class="slide accent-copper" data-track="附录" data-title="附录：技术与模块全景">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">附录 A</div>
+            <h2>技术与功能全景</h2>
+            <div class="split-grid">
+              <div class="feature-panel">
+                <h3>四层技术架构</h3>
+                <ul class="bullet-list">
+                  <li>采集与边缘层：护理员 APP、IoT 传感器、评估平板</li>
+                  <li>平台支撑层：数据中台、业务中台、AI 中台</li>
+                  <li>智能应用层：监管、经办、机构、评估员、护理员端</li>
+                  <li>门户展示层：大屏、统一门户、API 网关</li>
+                </ul>
+              </div>
+              <div class="feature-panel">
+                <h3>安全与隐私设计</h3>
+                <ul class="bullet-list">
+                  <li>数据最小化、假名化、差分隐私</li>
+                  <li>等保三级、全链路加密、零信任访问控制</li>
+                  <li>区块链存证、审计留痕、可信执行环境</li>
+                  <li>多方数据融合场景可采用联邦学习或 MPC</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-grid three-up">
+              <article class="card compact-card">
+                <h3>可信存证模块</h3>
+                <p>定位、活体、人脸哈希、水印照片、电子签名、规则引擎。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>持续评估模块</h3>
+                <p>数字生物标志物、失能预测模型、复评建议、评估员一致性分析。</p>
+              </article>
+              <article class="card compact-card">
+                <h3>智能风控模块</h3>
+                <p>图谱分析、异常检测、基金监控大屏、多维交叉验证。</p>
+              </article>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>附录说明</h3>
+            <p>本页用于补充技术落地能力和系统全景，可作为方案附录保留。</p>
+          </aside>
+        </section>
+
+        <section class="slide accent-gold" data-track="附录" data-title="附录：来源与操作说明">
+          <div class="slide-shell">
+            <div class="slide-number"></div>
+            <div class="eyebrow">附录 B</div>
+            <h2>资料来源与演讲使用说明</h2>
+            <div class="split-grid">
+              <div class="feature-panel">
+                <h3>主要公开资料</h3>
+                <ul class="bullet-list source-list">
+                  <li><a href="https://www.stats.gov.cn/xxgk/sjfb/tjgb2020/202502/t20250228_1958817.html" target="_blank" rel="noreferrer">国家统计局《2024 年国民经济和社会发展统计公报》</a></li>
+                  <li><a href="https://www.nhsa.gov.cn/art/2025/4/9/art_14_16233.html" target="_blank" rel="noreferrer">国家医保局转载人民日报：长护险覆盖 49 城、近 1.9 亿人</a></li>
+                  <li><a href="https://www.nhsa.gov.cn/art/2026/3/30/art_14_20061.html" target="_blank" rel="noreferrer">国家医保局：加快建立长期护理保险制度</a></li>
+                  <li><a href="https://www.cac.gov.cn/2024-01/05/c_1706119078060945.htm" target="_blank" rel="noreferrer">《“数据要素×”三年行动计划（2024-2026 年）》</a></li>
+                  <li><a href="https://www.gov.cn/yaowen/liebiao/202401/content_6926137.htm" target="_blank" rel="noreferrer">国务院办公厅《关于发展银发经济增进老年人福祉的意见》</a></li>
+                  <li><a href="https://www.deo.org.cn/article/hyfz_dfdt/detail1996.html" target="_blank" rel="noreferrer">德阳数据要素创新成果亮相第八届数字中国建设峰会</a></li>
+                  <li><a href="https://www.deo.org.cn/article/sjjy_jydt/detail719.html" target="_blank" rel="noreferrer">“德阳探索”在我国数据要素领域第一门户平台绽放精彩</a></li>
+                </ul>
+              </div>
+              <div class="feature-panel">
+                <h3>演讲操作</h3>
+                <ul class="bullet-list">
+                  <li>空格、右键、下键：下一页</li>
+                  <li>左键、上键、Backspace：上一页</li>
+                  <li>F：切换全屏</li>
+                  <li>O：打开总览，快速跳页</li>
+                  <li>N：打开备注面板</li>
+                  <li>Home / End：跳到首页或末页</li>
+                </ul>
+                <div class="accent-block">
+                  推荐正文顺序：1-18 页。19-20 页作为附录备用。
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="slide-notes">
+            <h3>补充说明</h3>
+            <p>本网页骨架可复用到其他养老数据价值化方案，仅需替换正文内容和资料来源。</p>
+          </aside>
+        </section>
+      </main>
+
+      <aside id="notesPanel" aria-label="当前页备注">
+        <div class="notes-head">
+          <span>当前页备注</span>
+          <button class="tool-button subtle" id="notesClose" type="button">关闭</button>
+        </div>
+        <div id="notesContent" class="notes-content"></div>
+      </aside>
+
+      <section id="overview" aria-label="演讲总览">
+        <div class="overview-head">
+          <div>
+            <span class="overview-kicker">总览模式</span>
+            <h2>点击任意页快速跳转</h2>
+          </div>
+          <button class="tool-button" id="overviewClose" type="button">关闭</button>
+        </div>
+        <div id="overviewGrid" class="overview-grid"></div>
+      </section>
+
+      <button class="nav-button nav-prev" id="prevButton" type="button" aria-label="上一页">‹</button>
+      <button class="nav-button nav-next" id="nextButton" type="button" aria-label="下一页">›</button>
+
+      <div class="footer-strip">
+        <div class="footer-hint">空格 / 左右键切换 · F 全屏 · O 总览 · N 备注</div>
+        <div class="pager"><span id="pageCurrent">1</span> / <span id="pageTotal">1</span></div>
+      </div>
+      <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

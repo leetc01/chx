@@ -1,0 +1,367 @@
+:root {
+  --bg: #f5f1e8;
+  --paper: #fffdf8;
+  --ink: #202634;
+  --muted: #5e697d;
+  --line: rgba(32, 38, 52, 0.12);
+  --gold: #ca8b31;
+  --teal: #2f9d92;
+  --blue: #3f79c9;
+  --rose: #c96a75;
+  --shadow: 0 18px 48px rgba(32, 38, 52, 0.08);
+  --heading: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", serif;
+  --body: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(202, 139, 49, 0.12), transparent 26%),
+    radial-gradient(circle at top right, rgba(47, 157, 146, 0.12), transparent 22%),
+    linear-gradient(180deg, #f5f1e8 0%, #efebe1 100%);
+  font-family: var(--body);
+}
+
+.page-header {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 28px 28px 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.page-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--heading);
+}
+
+h1 {
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.header-copy p {
+  max-width: 860px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.page-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.poster {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 8px 28px 36px;
+  display: grid;
+  gap: 18px;
+}
+
+.hero-band,
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-band {
+  padding: 24px 26px;
+  display: grid;
+  gap: 18px;
+}
+
+.hero-statement {
+  font-family: var(--heading);
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.45;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-tags span,
+.panel-head span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(202, 139, 49, 0.12);
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.panel {
+  padding: 22px 24px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.triple-grid,
+.pain-grid,
+.stage-grid,
+.mvp-grid,
+.role-grid,
+.output-list,
+.bottom-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.triple-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pain-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stage-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mvp-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.role-grid,
+.output-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mini-card,
+.pain-card,
+.stage-card,
+.mvp-card,
+.flow-card,
+.role-card,
+.output-card,
+.phase-card,
+.business-card,
+.judgement-box {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px 18px 16px;
+}
+
+.mini-card p,
+.pain-card p,
+.stage-card p,
+.mvp-card p,
+.flow-card p,
+.role-card p,
+.output-card p,
+.phase-card p,
+.business-card p,
+.judgement-box p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.flow-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.flow-card {
+  position: relative;
+  min-height: 176px;
+}
+
+.flow-card:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+  color: var(--blue);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stage-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(63, 121, 201, 0.1);
+  color: var(--blue);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.stage-card.highlight {
+  background: linear-gradient(135deg, rgba(63, 121, 201, 0.08), rgba(202, 139, 49, 0.08));
+  border-color: rgba(63, 121, 201, 0.16);
+}
+
+.stage-time {
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mvp-card h3,
+.stage-card h3,
+.flow-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.metric-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.metric-strip span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(47, 157, 146, 0.1);
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.closure-band {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(63, 121, 201, 0.1), rgba(47, 157, 146, 0.1));
+  border: 1px solid rgba(63, 121, 201, 0.14);
+  font-weight: 600;
+}
+
+.dual-panel,
+.triple-bottom {
+  display: grid;
+  gap: 18px;
+}
+
+.dual-panel {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.triple-bottom {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.phase-grid,
+.business-grid {
+  grid-template-columns: 1fr;
+}
+
+.phase-card strong,
+.business-card strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.judgement-box {
+  height: calc(100% - 52px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(201, 106, 117, 0.08), rgba(63, 121, 201, 0.06));
+}
+
+@media (max-width: 1320px) {
+  .pain-grid,
+  .stage-grid,
+  .mvp-grid,
+  .flow-row,
+  .triple-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-card:not(:last-child)::after {
+    content: "";
+  }
+}
+
+@media (max-width: 960px) {
+  .page-header,
+  .dual-panel,
+  .triple-grid,
+  .pain-grid,
+  .stage-grid,
+  .mvp-grid,
+  .role-grid,
+  .output-list,
+  .flow-row,
+  .triple-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    padding-bottom: 0;
+  }
+
+  .poster {
+    padding-top: 18px;
+  }
+}

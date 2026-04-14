@@ -1,0 +1,268 @@
+:root {
+  --bg: #f6f3ed;
+  --paper: #fffdf9;
+  --paper-soft: #faf7f1;
+  --ink: #1e2430;
+  --muted: #68758a;
+  --line: rgba(30, 36, 48, 0.12);
+  --gold: #bc7c21;
+  --blue: #316fcb;
+  --shadow: 0 18px 48px rgba(30, 36, 48, 0.08);
+  --heading: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", serif;
+  --body: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top right, rgba(49, 111, 203, 0.08), transparent 22%),
+    radial-gradient(circle at top left, rgba(188, 124, 33, 0.08), transparent 24%),
+    linear-gradient(180deg, #f6f3ed 0%, #efebe3 100%);
+  font-family: var(--body);
+}
+
+.doc-header {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 28px 28px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.doc-kicker,
+.cover-kicker {
+  display: inline-block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+}
+
+.doc-header h1,
+.cover-card h2,
+.rendered-doc h1,
+.rendered-doc h2 {
+  font-family: var(--heading);
+}
+
+.doc-header h1 {
+  margin: 10px 0 12px;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.12;
+}
+
+.doc-header-copy p {
+  margin: 0;
+  max-width: 840px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.doc-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.doc-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.doc-layout {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 8px 28px 40px;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 22px;
+}
+
+.doc-sidebar {
+  position: sticky;
+  top: 16px;
+  height: fit-content;
+  display: grid;
+  gap: 16px;
+}
+
+.sidebar-card,
+.cover-card,
+.load-card,
+.rendered-doc {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+.sidebar-card,
+.cover-card,
+.load-card {
+  padding: 20px;
+}
+
+.sidebar-card h2,
+.cover-card h2 {
+  margin: 8px 0 12px;
+  font-size: 24px;
+}
+
+.sidebar-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.toc-list {
+  display: grid;
+  gap: 8px;
+}
+
+.toc-item {
+  display: block;
+  text-decoration: none;
+  color: var(--muted);
+  border-radius: 12px;
+  padding: 8px 10px;
+}
+
+.toc-item:hover,
+.toc-item:focus-visible {
+  background: var(--paper-soft);
+  color: var(--ink);
+  outline: none;
+}
+
+.cover-card p,
+.load-card {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.rendered-doc {
+  padding: 36px 40px;
+}
+
+.rendered-doc h1 {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.12;
+  margin: 0 0 24px;
+}
+
+.rendered-doc h2 {
+  font-size: 32px;
+  margin: 44px 0 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(30, 36, 48, 0.08);
+}
+
+.rendered-doc h3 {
+  margin: 28px 0 12px;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.rendered-doc p {
+  margin: 0 0 16px;
+  line-height: 1.9;
+  color: #2d3444;
+}
+
+.rendered-doc hr {
+  border: 0;
+  height: 1px;
+  background: rgba(30, 36, 48, 0.08);
+  margin: 28px 0;
+}
+
+.doc-li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin: 0 0 12px;
+}
+
+.doc-li .marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 50%;
+  background: rgba(49, 111, 203, 0.1);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.doc-li.bullet .marker {
+  background: rgba(188, 124, 33, 0.12);
+  color: var(--gold);
+}
+
+.doc-li.depth-1 {
+  margin-left: 20px;
+}
+
+.doc-li.depth-2 {
+  margin-left: 40px;
+}
+
+.doc-li.depth-3 {
+  margin-left: 60px;
+}
+
+.doc-li .text {
+  line-height: 1.85;
+  color: #2d3444;
+}
+
+.rendered-doc strong {
+  color: var(--ink);
+}
+
+.load-card.is-error {
+  color: #a7473d;
+  border-color: rgba(167, 71, 61, 0.18);
+  background: #fff7f4;
+}
+
+@media (max-width: 1100px) {
+  .doc-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .doc-header,
+  .doc-layout {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .rendered-doc {
+    padding: 24px 20px;
+  }
+}
