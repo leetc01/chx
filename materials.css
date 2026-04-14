@@ -1,12 +1,14 @@
 :root {
-  --bg: #0d1524;
-  --panel: rgba(13, 21, 36, 0.82);
-  --panel-strong: rgba(16, 26, 44, 0.94);
-  --line: rgba(255, 255, 255, 0.1);
-  --text: #edf3ff;
-  --muted: #9eb2cf;
-  --gold: #d7a24a;
-  --shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+  --bg: #eef2f6;
+  --panel: rgba(255, 255, 255, 0.94);
+  --panel-strong: #13243d;
+  --line: rgba(20, 32, 54, 0.08);
+  --line-strong: rgba(20, 32, 54, 0.16);
+  --text: #1b2a3b;
+  --muted: #617388;
+  --gold: #b98539;
+  --navy: #1f3554;
+  --shadow: 0 20px 52px rgba(15, 23, 42, 0.08);
   --heading: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", serif;
   --body: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
 }
@@ -20,24 +22,30 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(215, 162, 74, 0.12), transparent 26%),
-    radial-gradient(circle at top right, rgba(105, 168, 255, 0.12), transparent 24%),
-    linear-gradient(180deg, #0d1524 0%, #0a1220 100%);
+    linear-gradient(180deg, rgba(20, 36, 61, 0.05), transparent 180px),
+    radial-gradient(circle at top left, rgba(185, 133, 57, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(31, 53, 84, 0.08), transparent 22%),
+    linear-gradient(180deg, #eef2f6 0%, #f7f9fc 100%);
   font-family: var(--body);
 }
 
 .shell {
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 32px 24px 40px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 26px 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 253, 0.92));
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
 }
 
 .kicker {
@@ -72,18 +80,19 @@ body {
 .sub-tab {
   text-decoration: none;
   color: var(--muted);
-  padding: 8px 12px;
+  padding: 9px 14px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.72);
   font-size: 12px;
 }
 
 .sub-tab.is-active,
 .sub-tab:hover,
 .sub-tab:focus-visible {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  background: var(--navy);
+  border-color: var(--navy);
   outline: none;
 }
 
@@ -183,13 +192,14 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.95fr);
   gap: 24px;
-  padding: 32px;
+  padding: 34px;
   border-radius: 32px;
   overflow: hidden;
   background:
-    radial-gradient(circle at top right, rgba(215, 162, 74, 0.18), transparent 28%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
+    radial-gradient(circle at top right, rgba(185, 133, 57, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(25, 45, 73, 0.98), rgba(18, 36, 61, 0.98)),
     var(--panel-strong);
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
 .identity-card::before {
@@ -203,14 +213,22 @@ body {
   pointer-events: none;
 }
 
+.identity-card::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(239, 207, 141, 0.92), rgba(255, 255, 255, 0));
+}
+
 .resume-role {
   display: inline-flex;
   align-items: center;
   padding: 6px 12px;
-  border: 1px solid rgba(215, 162, 74, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
-  background: rgba(215, 162, 74, 0.08);
-  color: #f2c77d;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4d7a0;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -221,12 +239,13 @@ body {
   font-family: var(--heading);
   font-size: clamp(36px, 5vw, 64px);
   line-height: 1;
+  color: #fff;
 }
 
 .identity-summary {
   margin: 0;
   max-width: 640px;
-  color: var(--muted);
+  color: rgba(240, 245, 252, 0.8);
   line-height: 1.9;
   font-size: 15px;
 }
@@ -244,12 +263,13 @@ body {
   min-height: 94px;
   padding: 16px 18px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
+  backdrop-filter: blur(8px);
 }
 
 .contact-item span,
@@ -262,7 +282,7 @@ body {
 }
 
 .contact-item span {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.64);
   font-size: 12px;
   letter-spacing: 0.04em;
 }
@@ -270,6 +290,7 @@ body {
 .contact-item strong {
   font-size: 16px;
   line-height: 1.45;
+  color: #fff;
 }
 
 .stats-row {
@@ -282,14 +303,16 @@ body {
   padding: 20px 22px;
   border-radius: 22px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
-    rgba(12, 20, 34, 0.84);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 252, 0.94)),
+    rgba(255, 255, 255, 0.9);
+  border-color: var(--line);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.05);
 }
 
 .stat-panel strong {
   display: block;
   margin-bottom: 8px;
-  color: #fff7ea;
+  color: var(--navy);
   font-family: var(--heading);
   font-size: 34px;
   line-height: 1;
@@ -309,6 +332,10 @@ body {
 .project-detail {
   border-radius: 26px;
   padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 251, 253, 0.96)),
+    #fff;
+  border-color: var(--line);
 }
 
 .side-card h3,
@@ -328,23 +355,68 @@ body {
 }
 
 .tag-cloud span {
-  padding: 8px 12px;
+  padding: 9px 13px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.05);
-  color: #d7e4fb;
+  border: 1px solid rgba(31, 53, 84, 0.12);
+  background: rgba(31, 53, 84, 0.04);
+  color: var(--navy);
   font-size: 13px;
 }
 
-.resume-section {
+.resume-brief {
   margin-bottom: 20px;
+}
+
+.executive-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.executive-card {
+  position: relative;
+  padding: 22px 24px;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 252, 0.96)),
+    #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.executive-card span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.executive-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-family: var(--heading);
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.executive-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.resume-section {
+  margin-bottom: 24px;
 }
 
 .section-head {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .section-head span {
@@ -354,9 +426,9 @@ body {
   width: 46px;
   height: 46px;
   border-radius: 14px;
-  background: rgba(215, 162, 74, 0.12);
-  border: 1px solid rgba(215, 162, 74, 0.28);
-  color: #f2c77d;
+  background: rgba(185, 133, 57, 0.1);
+  border: 1px solid rgba(185, 133, 57, 0.22);
+  color: var(--gold);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -444,13 +516,35 @@ body {
 .project-card,
 .project-detail {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
-    rgba(12, 20, 34, 0.9);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 253, 0.98)),
+    #fff;
 }
 
 .project-card p,
 .project-detail p {
   margin-bottom: 14px;
+}
+
+.timeline-card,
+.project-card,
+.project-detail,
+.summary-card,
+.side-card,
+.executive-card {
+  overflow: hidden;
+}
+
+.timeline-card::before,
+.project-card::before,
+.project-detail::before,
+.summary-card::before,
+.side-card::before,
+.executive-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, rgba(185, 133, 57, 0.8), rgba(31, 53, 84, 0.35));
 }
 
 .compact-bottom {
@@ -464,6 +558,7 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .executive-strip,
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -487,6 +582,7 @@ body {
 
   .contact-grid,
   .stats-row,
+  .executive-strip,
   .summary-grid,
   .project-grid {
     grid-template-columns: 1fr;
