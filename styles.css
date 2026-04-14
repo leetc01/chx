@@ -65,7 +65,7 @@ body::before {
   z-index: 40;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   padding: 18px 24px 14px;
   background: linear-gradient(180deg, rgba(6, 12, 24, 0.9), rgba(6, 12, 24, 0.38));
@@ -75,7 +75,7 @@ body::before {
 .brand-block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .brand-kicker {
@@ -91,10 +91,38 @@ body::before {
   letter-spacing: 0.02em;
 }
 
+.portfolio-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portfolio-tab {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.portfolio-tab:hover,
+.portfolio-tab:focus-visible,
+.portfolio-tab.is-active {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--text);
+  outline: none;
+}
+
 .topbar-meta {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .track-chip {
@@ -132,7 +160,7 @@ body::before {
 
 #stage {
   position: fixed;
-  top: 76px;
+  top: 118px;
   left: 20px;
   right: 20px;
   bottom: 48px;
@@ -574,7 +602,7 @@ a:focus-visible {
 
 #notesPanel {
   position: fixed;
-  top: 76px;
+  top: 118px;
   right: 20px;
   bottom: 48px;
   width: 320px;
@@ -619,7 +647,7 @@ body.notes-open #notesPanel {
 
 #overview {
   position: fixed;
-  top: 76px;
+  top: 118px;
   left: 20px;
   right: 20px;
   bottom: 48px;
@@ -786,7 +814,7 @@ body.overview-open .nav-button {
   }
 
   #stage {
-    top: 92px;
+    top: 142px;
     left: 14px;
     right: 14px;
     bottom: 58px;
